@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление HTML-объектов</title>
+    <link rel="icon" type="image/x-icon" href="ICO.png">
+</head>
+<body>
+    <div id="container">
+        <h1>Hello, World!</h1>
+        <p style="font-size: 30px;">Разработчик не несет ответственности за пользователей!</p>
+        <button onclick="clearPage()" style="font-size: 30px;">Продолжить</button>
+    </div>
+
+    <script>
+        function clearPage() {
+            // Очистка содержимого контейнера
+            const container = document.getElementById('container');
+            container.innerHTML = '';
+
+            // Добавление новых HTML-объектов
+            container.innerHTML = `
+                <h2>Полный набор для взлома XBOX 360</h2>
+                <button onclick="restorePage()" style="font-size: 24px;">Скачать jrunner</button>
+                <button onclick="instruction()" style="font-size: 24px;">Открыть инструкцию</button>
+
+            `;
+        }
+
+        function restorePage() {
+            window.location.href = 'https://github.com/Octal450/J-Runner-with-Extras/releases';
+        }
+        function instruction(){
+            window.location.href = 'https://consolefix.ru/instruktsiya-po-ustanovke-freeboot-cherez-j-runner/'
+        }
+        
+    </script>
+</body>
+</html>
