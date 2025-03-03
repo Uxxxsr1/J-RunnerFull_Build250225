@@ -3,8 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добавление HTML-объектов</title>
+    <title>Взлом консолей 7 поколения</title>
     <link rel="icon" type="image/x-icon" href="ICO.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #container {
+            text-align: center;
+            background-color: #2a2a40;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ff6f61;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #ff3b2f;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .console-section {
+            margin-top: 40px;
+        }
+
+        .console-section p {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -21,20 +99,48 @@
 
             // Добавление новых HTML-объектов
             container.innerHTML = `
-                <h2>Полный набор для взлома XBOX 360</h2>
-                <button onclick="restorePage()" style="font-size: 24px;">Скачать jrunner</button>
-                <button onclick="instruction()" style="font-size: 24px;">Открыть инструкцию</button>
-
+                <h2>Полный набор для взлома всех консолей 7 поколения</h2>
+                <div class="console-section">
+                    <p>Xbox 360</p>
+                    <button onclick="FAQx360()">Открыть FAQ Xbox 360</button>
+                    <button onclick="restorePage()">Скачать J-Runner</button>
+                    <button onclick="instruction()">Открыть инструкцию</button>
+                </div>
+                <div class="console-section">
+                    <p>PS3</p>
+                    <button onclick="FAQps3()">Открыть FAQ для PS3</button>
+                    <button onclick="firstHack()">Custom Firmware (CFW)</button>
+                    <button onclick="stephack()">Homebrew Enabler (HEN)</button>
+                </div>
+                <div class="footer">
+                    <p>© 2023 Взлом консолей. Все права (наверно) защищены.</p>
+                </div>
             `;
         }
 
         function restorePage() {
-            window.location.href = 'https://github.com/Octal450/J-Runner-with-Extras/releases';
+            window.location.href = '';
         }
-        function instruction(){
-            window.location.href = 'https://consolefix.ru/instruktsiya-po-ustanovke-freeboot-cherez-j-runner/'
+
+        function instruction() {
+            window.location.href = 'https://consolefix.ru/instruktsiya-po-ustanovke-freeboot-cherez-j-runner/';
         }
-        
+
+        function FAQx360() {
+            window.location.href = 'https://consolefix.ru/faq-xbox-360/';
+        }
+
+        function FAQps3() {
+            window.location.href = 'https://consolefix.ru/faq-playstation-3/';
+        }
+
+        function firstHack() {
+            window.location.href = 'https://github.com/aldostools/install-ps3hen';
+        }
+
+        function stephack() {
+            window.location.href = 'https://www.reddit.com/r/ps3homebrew/comments/z94gse/ps3_modchip/';
+        }
     </script>
 </body>
 </html>
